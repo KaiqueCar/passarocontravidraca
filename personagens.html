@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pássaro contra a vidraça</title>
+
+  <style>
+    * {
+      text-decoration: none;
+
+    }
+
+    a {
+      color: #fff;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #3B60A4, #7DB3B3);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #23315d;
+      position: absolute;
+      left: 420px;
+      top: 20px;
+      font-size: 75px;
+      animation: aparecer 1s ease-in-out;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      position: sticky;
+      background: 1px solid #23315d;
+    }
+
+    nav {
+      background: #314975;
+      font-size: 22px;
+      width: 97vw;
+      justify-content: left;
+      padding: 15px;
+      position: sticky; 
+      top: 0; 
+      left: 0;
+      z-index: 1000;
+      border-radius: 5px;
+      border-color: #a6b5d1;
+      display: flex;
+      gap: 35px;
+      margin: 0;
+      position: relative;
+      box-shadow: 0 2px 8px #0003;
+      transition: all 0.2s ease;
+    }
+    nav:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        transform: translateY(+5px);
+    }
+    .bloquinho-nav {
+      background: #2e3b64;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-size: 22px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      box-shadow: 0 2px 8px #0003;
+      position: absolute;
+      top: 5px;
+      left: 372px;
+      width: 100px; /* ajuste conforme necessário */
+      height: 28px; /* ajuste conforme necessário */
+      z-index: 0;
+    }
+    nav a {
+      position: relative;
+      z-index: 1;
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #3B60A4, #7DB3B3);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    /* -------------------------- */
+    /*  CARROSSEL DE PERSONAGENS  */
+    /* -------------------------- */
+
+    .personagens {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 120px;
+      width: 100%;
+      gap: 30px;
+    }
+
+    .carrossel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      width: 90%;
+      left: 52;
+      max-width: 1200px;
+      padding: 30px;
+      background: #23315d;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px #0005;
+    }
+
+    .carrossel img {
+      width: 200px;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .carrossel img:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    .descricao {
+      font-size: 35px;
+      color: #d5dae9;
+      background: #2e3b64;
+      padding: 20px;
+      border-radius: 20px;
+      width: 60%;
+      height: 250px;
+      text-align: center;
+      box-shadow: 0 4px 12px #0005;
+      transition: all 0.4s ease;
+      min-height: 80px;
+    }
+
+    .descricao.fade {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="bloquinho-nav"></div>
+      <a href="inicio.html">início</a>
+      <a href="sinopse.html">sinopse</a>
+      <a href="autora.html">autora</a>
+      <a href="quiz.html">quiz</a>
+      <a href="Personagens inicio.Html">personagens</a>
+      <a href="contato.html">contato</a>
+    </nav>
+  </header>
+
+  <h1>Personagens</h1>
+
+  <!-- CARROSSEL DE PERSONAGENS -->
+  <section class="personagens">
+    <div class="carrossel">
+      
+      <img src="Imagens/p1.png" alt="Personagem 1" data-desc="Personagem 1 é o protagonista, curioso e gentil.">
+      <img src="Imagens/p2.png" alt="Personagem 2" data-desc="Rogério: Pai de Igor, empresário, alcoólatra com problemas de raiva.">
+      <img src="Imagens/p3.png" alt="Personagem 3" data-desc="Renata: Mãe de Igor, entretanto não gostava de ser chamada de mãe e preferia que Igor a chamasse de Renata. Tomava calmantes para conseguir dormir.">
+      <img src="Imagens/p4.png" alt="Personagem 4" data-desc="Personagem 4 é introspectivo, mas corajoso.">
+      <img src="Imagens/p5.png" alt="Personagem 5" data-desc="Personagem 5 é determinado e sonhador.">
+      <img src="Imagens/p6.png" alt="Personagem 6" data-desc="Personagem 6 é carismático e líder natural.">
+      <img src="Imagens/p7.png" alt="Personagem 7" data-desc="Personagem 7 é sensível e criativo.">
+    </div>
+    <p class="descricao">Clique em um personagem para ver a descrição.</p>
+  </section>
+
+  <script>
+    const imagens = document.querySelectorAll('.carrossel img');
+    const descricao = document.querySelector('.descricao');
+
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        descricao.classList.add('fade');
+        setTimeout(() => {
+          descricao.textContent = img.dataset.desc;
+          descricao.classList.remove('fade');
+        }, 200);
+        imagens.forEach(i => i.style.opacity = "0.5");
+        img.style.opacity = "1";
+      });
+    });
+  </script>
+</body>
+</html>
